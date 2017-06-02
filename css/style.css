@@ -1,4 +1,5 @@
 /*! * Layana HTML 1.0.0 by WowThemes.net * All rights reserved http://www.wowthemes.net */
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 html,body {
 	width:100%;
 	height:100%;
@@ -384,14 +385,13 @@ body {
 	background-size:cover;
 }
 .carousel-main-caption h1 {
-	font-size:90px;
-	color:#fff;
+	font-size:60px;
 	margin-bottom:0px;
 	letter-spacing:3px;
-	font-family:"Amantica SC";
+	font-family:"Trebuchet MS";
 }
 
-.carousel-main-caption h3{
+.carousel-main-caption h1, .carousel-main-caption h3, .carousel-main-caption h4{
 	color: #fff;
 }
 
@@ -436,7 +436,7 @@ body {
 	background: rgba(0, 0, 0, 0.5);
 	border-radius: 10px;
 	margin-top: 250px;
-	margin-left: 50px;
+	margin-left: 200px;
 }
 
 .carousel-caption button {
@@ -1342,6 +1342,29 @@ div.modal-header .close{
 div.modal-header .close:hover{
     opacity: 1;
 }
+div.modal-header{
+    border-bottom: 0px !important;
+}
+
+.modal-body .modal-date{
+    text-align: right;
+}
+
+.modal-body .modal-date div{
+    margin-top: -15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 15px;
+    /* border: 2px gray !important; */
+    background: gray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #fff;
+    box-shadow: 0 1px 6px rgb(128, 128, 128);
+    font-family: Dosis;
+    font-weight: bold;
+}
 
 /*-- skills --*/
 .more {
@@ -1446,5 +1469,10 @@ text-align:right;
     padding: 0em 0em 0;
 }
 /*-- //skills --*/
+
+/* -- footer -- */
+.footer p{
+    text-align: center;
+}
 
 
