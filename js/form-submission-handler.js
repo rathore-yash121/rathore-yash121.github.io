@@ -44,14 +44,25 @@ function getFormData() {
 function handleFormSubmit(event) {  // handles form submit withtout any jquery
   event.preventDefault();           // we are submitting via xhr below
     
-    document.getElementById('gform').style.display = 'none'; // hide form
-    document.getElementById('sendingGif').style.display = 'initial'; // show sending gif
+    
     
   var data = getFormData();         // get the values submitted in the form
-  if( !validEmail(data.email) ) {   // if email is not valid show error
+  if(data.name.length ==0 || data.email.length ==0 || data.comment.length ==0){
+    document.getElementById('error').style.display = 'block';
+    document.getElementById('email-invalid').style.display = 'none';
+    return false ;
+  }
+  else if( !validEmail(data.email) ) {   // if email is not valid show error
     document.getElementById('email-invalid').style.display = 'block';
+    document.getElementById('error').style.display = 'none';
     return false;
-  } else {
+  }
+   else {
+    document.getElementById('error').style.display = 'none';
+    document.getElementById('email-invalid').style.display = 'none';
+    document.getElementById('gform').style.display = 'none'; // hide form
+    document.getElementById('sendingGif').style.display = 'initial'; // show sending gif
+
     var url = event.target.action;  //
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url);

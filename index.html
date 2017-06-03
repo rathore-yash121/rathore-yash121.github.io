@@ -768,23 +768,30 @@
 		<h2 class="section-heading" style="color:white;" >LET'S  <b>CONNECT</b></h2>
 		<hr class="primary">
 		<div class="regularform">
-			<div class="done">
+<!-- 			<div class="done">
 				<div class="alert alert-success">
 					<button type="button" class="close" data-dismiss="alert">×</button>
 					Your message has been sent. Thank you!
 				</div>
 			</div>
+ -->		<div style="display: none" id="error">
+				<h4 style="color:white;">Please fill up all the required fields.</h4>
+			</div>
+			<div style="display: none" id="email-invalid">
+				<h4 style="color:white;">Please enter a valid email address.</h4>
+			</div>
 			<form method="POST" id="gform" class="text-left" action="https://script.google.com/macros/s/AKfycbzy0oyLwTu1KJjRok7v2fOQ0wSNcZ1UG65FFYHD76QRnc5JPPXk/exec">
-				<input name="name" type="text" class="col-md-6 norightborder" placeholder="Your Name *">
-				<input name="email" type="email" class="col-md-6" placeholder="E-mail address *">
-				<textarea name="comment" class="col-md-12" placeholder="Message *"></textarea>
+				<input name="name" id="name" type="text" class="col-md-6 norightborder" placeholder="Your Name *">
+				<input name="email" id="email" type="email" class="col-md-6" placeholder="E-mail address *">
+				<textarea name="comment" id="comment" class="col-md-12" placeholder="Message *"></textarea>
 				<input type="submit" class="contact submit btn btn-primary btn-xl" value="Send message">
 			</form>
             <div id="sendingGif" style="display: none"><img src="img/gif-icons-menu-transition-animations-send-mail.gif"></div>
+           
 			<div style="display: none" id="thankyou_message">
-				<h3 style="color:white;">Thank you! Your message has been received. 
+				<h4 style="color:white;">Thank you! Your message has been received. 
 					<br>I'll get back to you as soon as possible.
-				</h3>
+				</h4>
 			</div>
 		</div>
 	</div>
@@ -849,6 +856,18 @@
 
 <!-- Section Footer
 ================================================== -->
+<!-- <section class="bg-dark">
+<div class="container">
+<div class="row">
+	<div class="col-md-12 text-center">
+		<p>
+			&copy; 2016 Bootstrap HTML Template by WowThemes.net
+		</p>
+	</div>
+</div>
+</div>
+</section>
+ -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -873,13 +892,13 @@ $(document).ready(function () {
     });
     $('.modal').on('hide.bs.modal', function () {
         $('body').removeClass("modal-open-noscroll");
-        // $(".modal iframe").attr("src", $(".modal iframe").attr("src"));
+        $(this).find('iframe').attr("src", $(this).find('iframe').attr("src")); 
     });
 
-})
+});
+
 </script>
-<script data-cfasync="false" type="text/javascript"
-src="js/form-submission-handler.js"></script>
+<script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
 
 </body>
 </html>
