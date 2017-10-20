@@ -16,8 +16,14 @@ Features
 ->  The app uses the google places api to search for the places and also to get the details for a particular place.
 
 
--------------------
 
- #html5, #css3, #JS, #jQuery, #REST
+
+How to run?
+-----------
+Just download the folder zenefitsApp and put it in any server( could be also your loca server) and access the index.html file.
+
+
+
+Tags:  #HTML5, #CSS3, #JS, #jQuery, #REST
 
  
