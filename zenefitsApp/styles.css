@@ -1,0 +1,252 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	color:#eee;
+	font-family:Arial, Helvetica, sans-serif;
+	background:url('img/bg.jpg') repeat-x #718693;
+}
+
+#main{
+	/* The main container div */
+	width:100%;
+	margin:0px auto 0;
+}
+
+h1{
+	font-family:Corbel,'Myriad Pro',Arial, Helvetica, sans-serif;
+	background:url('img/heading.png') no-repeat center top;
+	text-indent:-9999px;
+	overflow:hidden;
+	height:90px;
+	margin-top: 10px;
+}
+
+#searchBox{
+	/* The search form. */
+	background-color:#4C5A65;
+	padding:5px 95px 5px;
+	margin:30px 0;
+	position:relative;
+
+	height: 750px;
+	-moz-border-radius:16px;
+	-webkit-border-radius:16px;
+	border-radius:16px;
+}
+
+fieldset{
+	border:none;
+}
+
+#searchInputContainer{
+	/* This div contains the transparent search box */
+	width:420px;
+	height:36px;
+	background:url("img/searchBox.png") no-repeat;
+	float:left;
+	margin-right:12px;
+}
+
+#s{
+	/* The search text box. */
+	
+	border:none;
+	color:#888888;
+	background:url("img/searchBox.png") no-repeat;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:15px;
+	height:36px;
+	line-height:36px;
+	margin-right:12px;
+	outline:medium none;
+	padding:0 0 0 35px;
+	text-shadow:1px 1px 0 white;
+	width:385px;
+}
+
+#infoWindowContent p {
+	color:#000;
+}
+
+/* Styling the search results */
+
+
+.pageContainer{
+	/* Holds each page with search results. Has an inset bottom border. */
+	border-bottom:1px solid #5e7481;
+	margin-bottom:50px;
+	
+	/* Adding a dark bottom border with box shadow */
+	
+	-moz-box-shadow:0 1px 0 #798e9c;
+	-webkit-box-shadow:0 1px 0 #798e9c;
+	box-shadow:0 1px 0 #798e9c;
+}
+
+
+p.notFound{
+	text-align:center;
+	padding:0 0 40px;
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	border-bottom:1px dotted #97cae6;
+	color:#97cae6;
+}
+
+a:hover{
+	border-bottom:1px dashed transparent;
+}
+
+.clear{
+	clear:both;
+}
+
+#main-container{
+	overflow:hidden;
+}
+
+#content{
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+	overflow-y: auto;
+    width: 500px;
+    margin-left: -10px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+ul {
+  list-style-type: none;
+  width: 500px;
+}
+
+li img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+li p {
+	font-family:Arial, Helvetica, sans-serif;
+	padding-left: 10px;
+}
+
+li {
+	margin-bottom: 5px;
+  overflow: auto;
+  background-color:rgba(0,0,0,0.2);
+}
+
+li:hover {
+  background-color:rgba(191, 210, 255,0.1);
+  cursor: pointer;
+}
+
+
+
+ /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 80%;
+		width: 70%;
+		float: right;
+		padding:10px 0 20px;
+      }
+	  
+	  .map-responsive{
+			position: relative;
+			overflow: hidden;
+			border-right-width: 20px;
+			padding-right: 0px;
+			padding-bottom: 0px;
+			margin-right: 10px;
+			margin-top: 50px;
+		}
+		.map-responsive iframe{
+			left:0;
+			top:0;
+			position:absolute;
+		}
+		
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #description {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      #infowindow-content .title {
+        font-weight: bold;
+      }
+
+      #infowindow-content {
+        display: none;
+      }
+
+      #map #infowindow-content {
+        display: inline;
+      }
+
+      .pac-card {
+        margin: 10px 10px 0 0;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+        font-family: Roboto;
+      }
+
+      #pac-container {
+        padding-bottom: 12px;
+        margin-right: 12px;
+      }
+
+      .pac-controls {
+        display: inline-block;
+        padding: 5px 11px;
+      }
+
+      .pac-controls label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+
+      #pac-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 30px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 400px;
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      #title {
+        color: #fff;
+        background-color: #4d90fe;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 6px 12px;
+      }
+      #target {
+        width: 345px;
+      }
