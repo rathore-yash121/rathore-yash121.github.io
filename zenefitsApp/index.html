@@ -129,28 +129,20 @@
 
 <script>
 
-    function getPlaceDetails(placeId) {
-      var url = 'https://maps.googleapis.com/maps/api/place/details/json?placeid='+placeId+'&key=AIzaSyBevZm-6lLQc7xLIneFIwp0ESd51hSUMkU' ;
-        // $.ajax({
-        //     type: 'POST',
-        //     url: 'https://maps.googleapis.com/maps/api/place/details/json?placeid='+placeId+'&key=AIzaSyBevZm-6lLQc7xLIneFIwp0ESd51hSUMkU',
-        //     async: false,
-        //     jsonpCallback: 'jsonCallback',
-        //     contentType: "application/json",
-        //     dataType: 'json',
-        //     success: function (data) {
-        //         myCallback(data);
-        //     },
-        //     error: function (e) {
-        //         console.log(e.message);
-        //     }
-        // });
+    function getPlaceDetails(placeId) {      
+
+      var url = 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?placeid='+placeId+'&key=AIzaSyBevZm-6lLQc7xLIneFIwp0ESd51hSUMkU' ;
         var xhttp = new XMLHttpRequest();
         xhttp.open("POST", url, false);
         xhttp.setRequestHeader("Content-type", "application/json");
+        // xhttp.setRequestHeader("Access-Control-Allow-Origin", "*"); 
+        // xhttp.setRequestHeader("Access-Control-Allow-Methods", "HEAD, GET, POST, PUT, PATCH, DELETE"); 
+        // xhttp.setRequestHeader("Access-Control-Allow-Heders", "Origin, Content-Type, X-Auth-Token"); 
+        
         xhttp.send();
-//        var response = JSON.parse(xhttp.responseText);
-        console.log(xhttp.responseText);
+
+        var response = JSON.parse(xhttp.responseText);
+        myCallback(response)
     }
 
     var rating, phoneNum, address ;
