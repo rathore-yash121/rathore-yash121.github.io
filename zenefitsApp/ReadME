@@ -1,0 +1,23 @@
+Go Places : A google powered app to find nearby places
+-----------------------------------------------
+
+For a live demo follow the link:   https://rathore-yash121.github.io/zenefitsApp/
+
+
+Features
+------------------
+
+->  A responsive User Interface, including a cool logo and favicon.
+->  An autocomplete search bar to look for any place you want eg: pizza, coffee, gym, etc.
+->  The results are marked on the map as well as a list is displayed once you hit enter.
+->  Click on any place from the list and notice the bouncing icon on the map.
+->  You can also see more details like the ratings, contact number and the address once you pick a particular store.
+->  The default position is San Francisco. But you can always move the map around and the results will be around this new position.
+->  The app uses the google places api to search for the places and also to get the details for a particular place.
+
+
+-------------------
+
+ #html5, #css3, #JS, #jQuery, #REST
+
+ 
