@@ -32,14 +32,6 @@
 
 
  <script>
-      // This example adds a search box to a map, using the Google Place Autocomplete
-      // feature. People can enter geographical searches. The search box will return a
-      // pick list containing a mix of places and predicted search terms.
-
-      // This example requires the Places library. Include the libraries=places
-      // parameter when you first load the API. For example:
-      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
 	  var markers = [];	  
 		var map ;
 		  
@@ -132,17 +124,14 @@
       }
 
     </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9IPEmQCX9UldcG51MV00FGvJRm5l6e4o&libraries=places&callback=initAutocomplete"></script>
-
-<!-- <script src="https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJZ76fAGGAhYARSVu9QqbiMMI&key=AIzaSyC9IPEmQCX9UldcG51MV00FGvJRm5l6e4o&callback=initAutocomplete"></script> -->
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBevZm-6lLQc7xLIneFIwp0ESd51hSUMkU&libraries=places&callback=initAutocomplete"></script>
 
 <script>
 
     function getPlaceDetails(placeId) {
         $.ajax({
             type: 'GET',
-            url: 'https://maps.googleapis.com/maps/api/place/details/json?placeid='+placeId+'&key=AIzaSyC9IPEmQCX9UldcG51MV00FGvJRm5l6e4o',
+            url: 'https://maps.googleapis.com/maps/api/place/details/json?placeid='+placeId+'&key=AIzaSyBevZm-6lLQc7xLIneFIwp0ESd51hSUMkU',
             async: false,
             jsonpCallback: 'jsonCallback',
             contentType: "application/json",
