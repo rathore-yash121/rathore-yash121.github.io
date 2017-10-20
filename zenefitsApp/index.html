@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 <title>Go Places</title>
 <link rel="shortcut icon" type="image/png" href="./img/download.png"/>
 <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -129,20 +130,27 @@
 <script>
 
     function getPlaceDetails(placeId) {
-        $.ajax({
-            type: 'GET',
-            url: 'https://maps.googleapis.com/maps/api/place/details/json?placeid='+placeId+'&key=AIzaSyBevZm-6lLQc7xLIneFIwp0ESd51hSUMkU',
-            async: false,
-            jsonpCallback: 'jsonCallback',
-            contentType: "application/json",
-            dataType: 'json',
-            success: function (data) {
-                myCallback(data);
-            },
-            error: function (e) {
-                console.log(e.message);
-            }
-        });
+      var url = 'https://maps.googleapis.com/maps/api/place/details/json?placeid='+placeId+'&key=AIzaSyBevZm-6lLQc7xLIneFIwp0ESd51hSUMkU' ;
+        // $.ajax({
+        //     type: 'POST',
+        //     url: 'https://maps.googleapis.com/maps/api/place/details/json?placeid='+placeId+'&key=AIzaSyBevZm-6lLQc7xLIneFIwp0ESd51hSUMkU',
+        //     async: false,
+        //     jsonpCallback: 'jsonCallback',
+        //     contentType: "application/json",
+        //     dataType: 'json',
+        //     success: function (data) {
+        //         myCallback(data);
+        //     },
+        //     error: function (e) {
+        //         console.log(e.message);
+        //     }
+        // });
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", url, false);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.send();
+//        var response = JSON.parse(xhttp.responseText);
+        console.log(xhttp.responseText);
     }
 
     var rating, phoneNum, address ;
